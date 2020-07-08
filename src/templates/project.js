@@ -75,11 +75,15 @@ export default function Project(props) {
         </div>
         <div className={styles.rowTwo}>
           <h2 className={styles.ldTitle}>{frontmatter.title}</h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(frontmatter.ld),
-            }}
-          />
+          {typeof DOMPurify !== "undefined" ? (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(frontmatter.ld),
+              }}
+            />
+          ) : (
+            ""
+          )}
         </div>
         <div className={styles.rowThree}>
           <div className={styles.blockD}>
