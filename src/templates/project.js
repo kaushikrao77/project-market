@@ -3,7 +3,11 @@ import { graphql } from "gatsby";
 import styles from "./project.module.css";
 import createDOMPurify from "dompurify";
 import Header from "../components/Header";
-const DOMPurify = createDOMPurify(window);
+let DOMPurify;
+if (typeof window !== "undefined") {
+  // it's safe to use window now
+  DOMPurify = createDOMPurify(window);
+}
 
 export const querry = graphql`
   query($slug: String!) {
