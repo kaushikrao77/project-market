@@ -1,7 +1,7 @@
 ---
 templateKey: project-post
 title: Digital Clock
-description: A digital Clock circuit without a Microcontroller
+description: A digital Clock circuit without a Microcontroller..
 link: https://www.youtube.com/watch?v=liG2Ksa-v_8
 ld: >-
   <style>
