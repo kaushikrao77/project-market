@@ -26,6 +26,7 @@ export const querry = graphql`
 `;
 
 export default function Project(props) {
+  console.log(props);
   let frontmatter = props.data.markdownRemark.frontmatter;
   let images = frontmatter.pictures.map((picture, idx) => (
     <img
